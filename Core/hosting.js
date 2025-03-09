@@ -1,6 +1,6 @@
-// var 
+// var
 
 console.log(a);
-console.log(b)
-let b = 20; 
+let b = 20;
+console.log(b);
 var a = 10;

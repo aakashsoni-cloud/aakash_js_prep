@@ -55,7 +55,8 @@ obj.x(); // globalObject - browser(window), node(global)
 
 let obj2 = {
   a: 10,
-  x: function () { // lexical context is obj for function 
+  x: function () {
+    // lexical context is obj for function
     // for this arrow function this function is enclosing **lexical context**
     const y = () => {
       console.log(this);

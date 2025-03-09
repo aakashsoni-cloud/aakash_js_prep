@@ -24,10 +24,11 @@ multiplyMoreByTwo(2);
 multipleMore(2)(3);
 
 // Question
+// Infinity currying
 let sum = function (a) {
   return function (b) {
-    if (b) return sum(a + b);
-    return a;
+    if (!b) return a;
+    return sum(a + b);
   };
 };
 console.log(sum(1)(2)(3)(4)());

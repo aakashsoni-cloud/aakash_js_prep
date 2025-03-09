@@ -8,7 +8,7 @@ function greetings(greet, time) {
   console.log(greet + ", " + this.name + ", " + time);
 }
 
-const user = {//
+const user = {
   name: "Aakash",
 };
 

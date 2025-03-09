@@ -11,10 +11,13 @@ function isPrime(a) {
 
 function printFirstNPrimes(n) {
   let output = [];
-  for (let i = 2; i <= n; i++) {
-    if (isPrime(i)) {
-      output.push(i);
+  let num = 2;
+
+  while (output.length < n) {
+    if (isPrime(num)) {
+      output.push(num);
     }
+    num++;
   }
   return output;
 }

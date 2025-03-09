@@ -5,7 +5,7 @@
 // }
 // console.log(a);
 
-// 100, 10
+// 100, 100
 
 // const c = 100;
 // function x() {
@@ -22,7 +22,7 @@
 // both has separate memory space
 // let a = 10;
 // {
-//   var a = 20;
+//   let a = 20;
 //   console.log(a);
 // }
 

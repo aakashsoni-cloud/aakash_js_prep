@@ -5,6 +5,10 @@ const getData = () => {
   console.log("Without Debouncing", counter++);
 };
 
+const handleExpensiveOperation = () => {
+  console.log("Debouncing Search");
+};
+
 // debounce func take two argument fn and delay
 // debounce function don't let the passed function to call unnecessary again and again
 // only allow to call the func if the difference between the time interval of two function call is greater than delay
@@ -23,6 +27,9 @@ const debounce = function (fn, delay) {
 
 // better function call on every key press
 const betterFunction = debounce(getData, 300);
+
+const text = document.getElementById("text");
+text.addEventListener("keyup", optimizedOperation);
 
 // window.addEventListener('resize', debounce(getData, 300))
 

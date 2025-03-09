@@ -13,7 +13,7 @@ function quickSort(arr) {
     return arr; // Base case
   }
 
-  const pivot = arr[0]; // last element
+  const pivot = arr[0]; // first element
   const left = [];
   const right = [];
 

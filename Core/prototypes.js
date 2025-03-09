@@ -19,13 +19,19 @@ let object2 = {
   city: "Jaipur",
 };
 
+console.log(object2.__proto__.greet)
 object2.__proto__ = object;
+
+console.log(object2)
+console.log(object2.__proto__.greet)
+
 
 // Pollyfill
 
 Array.prototype.people = ["aakash", "soni", "abhishek", "parth"];
 
 const students = [];
+
 
 // Protopype chain
 
