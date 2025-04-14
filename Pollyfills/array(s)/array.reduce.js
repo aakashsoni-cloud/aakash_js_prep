@@ -14,6 +14,8 @@ Array.prototype.customReduce = function (cb, initialValue, thisArgs) {
     acc = initialValue;
   }
 
+  // to allow explicit control over the this context inside the callback.
+  // If thisArgs is not provided, this inside the callback defaults to undefined in strict mode.
   for (let i = 0; i < inputArrayLength; i++) {
     if (i in inputArr) {
       acc = cb.call(thisArgs, acc, inputArr[i], i, inputArr);

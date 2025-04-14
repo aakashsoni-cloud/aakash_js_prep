@@ -1,15 +1,16 @@
 const users = fetch("https://jsonplaceholder.typicode.com/users");
 
-console.log(users);
 
 users.then((data) => data.json()).then((data) => console.log(data));
 
 const cart = ["shoes", "shirt", "kurtas", "iphone"];
 
-// Consumer
+// Custom Promise
+
+// This is to consume the promise
 createOrder(cart)
   .then(function (orderId) {
-    console.log(orderId);
+    console.log("order id -> ", orderId);
     // orderId passed to proceedToPayment
     return orderId;
   })
@@ -31,10 +32,13 @@ createOrder(cart)
   });
 
 // Producer
+
+// This Produce the promises
+// just to reject and resolve the promise
 function createOrder(cart) {
   const pr = new Promise(function (resolve, reject) {
     // validateCart
-    if (!validateCart(cart)) {
+    if (validateCart(cart)) {
       const error = new Error("Cart is not valid");
       reject(error);
     }
@@ -45,7 +49,7 @@ function createOrder(cart) {
     if (orderId) {
       setTimeout(() => {
         resolve(orderId);
-      }, 5000);
+      }, 2000);
     }
   });
 
@@ -53,12 +57,12 @@ function createOrder(cart) {
 }
 
 function validateCart(cart) {
-  return true;
+  return false;
 }
 
 function proceedToPayment(orderId) {
   return new Promise(function (resolve, reject) {
-    reject("Payment Successful");
+    resolve(`Payment Successful with ${orderId}`);
   });
 }
 

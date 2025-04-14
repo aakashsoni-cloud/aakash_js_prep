@@ -1,4 +1,5 @@
 
+# All Solid Principle
 ### 1. Single Responsibility Principle (SRP)
 **Essence:**  
 Every module, class, or function should have one—and only one—reason to change. Keep concerns separated.
@@ -106,7 +107,7 @@ displayArea(circle);
 
 **JavaScript Example:**
 
-## Problem
+#### Problem
 
 ```js
 class Vehicle {
@@ -134,7 +135,7 @@ class ByCycle extends Vehicle {
 
 ```
 
-## Solution 
+#### Solution 
 
 ```js
 // Given the solution forß above:

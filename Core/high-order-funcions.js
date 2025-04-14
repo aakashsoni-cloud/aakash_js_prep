@@ -1,21 +1,22 @@
 // DRY => Don't Repeat Yourself
 
 const radius = [2, 4, 6, 8];
-// const calculateArea = function (radius) {
-//   const output = [];
-//   for (let i = 0; i < radius.length; i++) {
-//     output.push(Math.PI * radius[i] * radius[i]); 3.14 * r^2
-//   }
-//   return output;
-// };
+const calculateArea = function (radius) {
+  const output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(Math.PI * radius[i] * radius[i]);
+    // (3.14 * r) ^ 2;
+  }
+  return output;
+};
 
-// const calculateDiameter = function (radius) {
-//   const output = [];
-//   for (let i = 0; i < radius.length; i++) {
-//     output.push(2 * radius[i]);
-//   }
-//   return output;
-// };
+const calculateDiameter = function (radius) {
+  const output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 * radius[i]);
+  }
+  return output;
+};
 
 // console.log(calculateArea(radius))
 

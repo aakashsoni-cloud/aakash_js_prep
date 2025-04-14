@@ -29,7 +29,7 @@ d();
 var e = function (param1, param2) {
   console.log(param1 + param2);
 };
-e(2, 3);
+e(2, 3); // arguments
 
 // First Class Functions - Ability to be used like values
 // First Class Functions - First Class Citizen
@@ -63,3 +63,8 @@ console.log(f());
 // Arrow Functions
 var j = (param) => console.log(param);
 j(5);
+
+// IIFE (Immediately Invoked Function Expression)
+(function () {
+  console.log(" This is IIFE");
+})();

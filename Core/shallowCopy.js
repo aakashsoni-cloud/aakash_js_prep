@@ -10,6 +10,24 @@ function question1() {
   arr1.push(11);
   console.log("Array 2 is " + arr2);
   console.log("Array 1 is " + arr1);
+
+  let obj = { name: "aakash" };
+  let obj2 = obj;
+  obj2.name = "deep soni";
+  console.log(obj);
+
+  const original = {
+    name: "Alice",
+    details: {
+      age: 25,
+    },
+  };
+
+  const shallowCopy = { ...original };
+
+  shallowCopy.details.age = 30;
+
+  console.log(original.details.age); // 30 ❌ (original is affected)
 }
 
 question1();

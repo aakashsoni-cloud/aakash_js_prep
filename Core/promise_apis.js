@@ -38,7 +38,7 @@ const P1 = new Promise((resolve, reject) => {
 
 const P2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("P2 Success");
+    reject("P2 Reject");
   }, 1000);
 });
 

@@ -36,18 +36,19 @@
 //   for (var i = 0; i <= 5; i++) {
 //     // with var it will run 6 6 times as at last i become 6
 //     // with let 0 to 5
-
 //     // with var
-//     // close(i)
-//     setTimeout(function (y) {
-//       console.log(y);
-//     }, 1000, i);
-
+//     // close(i);
+//     // setTimeout(
+//     //   function (y) {
+//     //     console.log(y);
+//     //   },
+//     //   1000,
+//     //   i
+//     // );
 //     // with let
 //     // setTimeout(function () {
 //     //   console.log(i);
 //     // }, 1000);
-
 //     // each time it
 //     // create a closure with variable x
 //   }
@@ -101,9 +102,14 @@
 
 function x() {
   var b = function b() {
-    console.log(b);
+    console.log("hi");
   };
-  console.log(b);
+
+  let item = setTimeout(() => {
+    b();
+  }, 1000);
+
+  console.log(item);
 }
 
 x();

@@ -1,13 +1,21 @@
-const newCLose = () => {
-  let a = 20;
-  return a;
-};
-function close() {
-  const data = setTimeout(function () {
-    return newCLose();
-  }, 1000);
+// Object Manipulation
+const input = [
+  {
+    category: "Frontend",
+    topics: ["HTML", "CSS"],
+  },
+  {
+    category: "Backend",
+    topics: ["Node", "Express"],
+  },
+];
 
-  console.log(data);
-}
-
-close();
+/*
+  Expected Output:
+  {
+    HTML: "Frontend",
+    CSS: "Frontend",
+    Node: "Backend",
+    Express: "Backend"
+  }
+  */

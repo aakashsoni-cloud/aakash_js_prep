@@ -17,8 +17,8 @@ function question1() {
   const arr1 = [1, 2, 3, 4];
   const arr2 = [...arr1]; // deepCopy
   arr2.push(10);
-  console.log("Array 2 is " + arr2);
   console.log("Array 1 is " + arr1);
+  console.log("Array 2 is " + arr2);
 }
 
 question1();
@@ -79,3 +79,15 @@ function question5() {
 }
 
 question5();
+
+
+/*
+⚠️ Limitations of JSON Deep Copy
+❌ Skips functions
+
+❌ Skips undefined
+
+❌ Doesn't handle Date, Map, Set, RegExp properly
+
+❌ Fails on circular references
+*/

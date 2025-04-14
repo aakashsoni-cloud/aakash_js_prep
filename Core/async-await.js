@@ -12,16 +12,18 @@ it if does not return a promise then it automatically wrap into a promise and re
 
 */
 
+// Question 1
 // const p = new Promise((resolve, reject) => {
 //   resolve("Promise is resolved value!!");
 // });
 
 // async function getData(params) {
-//   //   return "Async/Await";
+//   // return "Async/Await";
 //   return p;
 // }
 
 // const dataPromise = getData();
+// console.log(dataPromise); //{Promise <>}
 
 // dataPromise.then((res) => console.log(res));
 
@@ -33,6 +35,7 @@ it if does not return a promise then it automatically wrap into a promise and re
 // Till the promise get resolved the call-stack remain empty and once it resolved the suspended function start executing from where it left.
 
 ///// very very important ///////
+
 // const p1 = new Promise((resolve, reject) => {
 //   setTimeout(() => {
 //     resolve("Using await keyword - p1");
@@ -60,17 +63,17 @@ it if does not return a promise then it automatically wrap into a promise and re
 
 ////////////
 
-const API_URL = "https://api.github.com/users/aakashsoni-cloud";
-async function handlePromise() {
-  try {
-    const data = await fetch(API_URL);
-    const response = await data.json();
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
+// const API_URL = "https://api.github.com/users/aakashsoni-cloud";
+// async function handlePromise() {
+//   try {
+//     const data = await fetch(API_URL);
+//     const response = await data.json();
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error);
+//   }
 
-  //   fetch().then((res) => res.json()).then((res) => console.log(res))
-}
+//   //   fetch().then((res) => res.json()).then((res) => console.log(res))
+// }
 
-handlePromise();
+// handlePromise();

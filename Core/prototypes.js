@@ -47,6 +47,7 @@ parent.sayHi = function () {
 };
 
 const child = Object.create(parent);
+const child2 = Object.assign({}, parent);
 child.sayHello = function () {
   console.log("Hello from Child!");
 };
@@ -54,4 +55,7 @@ child.sayHello = function () {
 // Access properties and methods
 child.sayHello(); // Output: Hello from Child!
 child.sayHi(); // Output: Hi from Parent!
-child.greet(); // Output: Hello from Grandparent!
+// child.greet(); // Output: Hello from Grandparent!
+
+console.log(Object.getPrototypeOf(child) === parent);
+console.log(Object.getPrototypeOf(child2) === parent);

@@ -11,6 +11,8 @@ const throttle = function (fn, limit) {
 
   return function () {
     // closer
+    clearInterval(timerId);
+
     let context = this,
       args = arguments;
 

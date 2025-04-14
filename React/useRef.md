@@ -1,6 +1,7 @@
 ## DEFINITION
 
-**useRef** is a Hook that provides a way to persist a value across renders without causing the component to re-render.
+**useRef** is a Hook that provides a **way to persist a value across renders without causing the component to re-render**.
+
 It can be used for directly interacting with DOM elements, storing values, or accessing previous state/props.
 
 # UseCase

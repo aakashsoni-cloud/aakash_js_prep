@@ -39,3 +39,43 @@ console.log(shape.perimeter());
 console.log("+true", +true);
 
 console.log("!`Aakash`", !"Aakash");
+
+
+// Question 5
+
+
+async function foo() {
+  console.log("1");
+  await bar();
+  console.log("2");
+}
+
+async function bar() {
+  console.log("3");
+}
+
+console.log("4");
+foo();
+console.log("5");
+
+
+// Question 6
+
+console.log("A");
+
+Promise.resolve().then(() => {
+  console.log("B");
+  return Promise.resolve();
+}).then(() => {
+  console.log("C"); // Promise chained
+});
+
+setTimeout(() => {
+  console.log("D");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("E");
+});
+
+console.log("F");

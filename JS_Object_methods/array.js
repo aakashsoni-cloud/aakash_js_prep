@@ -108,6 +108,7 @@ console.log(arr12.flat());
 
 let arr13 = [1, 2, 3, 4, 5];
 // like map and then followed by flat by depth 1 level
+console.log(arr13.splice(0, 2, 0, 0));
 console.log(arr13.flatMap((item) => [item * 2]));
 
 console.log(arr12.join("-"));
