@@ -1,3 +1,4 @@
+<!-- https://chatgpt.com/c/67f771ee-f9bc-8013-8e3c-f7c865727caa -->
 ## Context API vs Redux: Are They the Same?
 
 React Context API and Redux both help in state management and data sharing across components, but they are **not the same**. Here's a detailed breakdown:
@@ -6,8 +7,8 @@ React Context API and Redux both help in state management and data sharing acros
 
 ### 1. Purpose & Use Case
 
-| Feature              | React Context API                          | Redux                                            |
-|----------------------|---------------------------------------------|--------------------------------------------------|
+| Feature               |React Context API                          |Redux                                            |
+                        |----------------------|---------------------------------------------|--------------------------------------------------|
 | **Purpose**           | Share state globally without prop drilling | Manage global state with a central store         |
 | **Best For**          | Small to medium apps, theme, language, auth | Medium to large apps with complex state          |
 
