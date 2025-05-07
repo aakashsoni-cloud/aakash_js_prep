@@ -1,9 +1,11 @@
 class Node {
   constructor(data1, next1) {
-    (this.data = data1), (this.next = next1);
+    this.data = data1;
+    this.next = next1;
   }
 }
 
+// https://www.geeksforgeeks.org/problems/introduction-to-linked-list/1
 function createArrayToLL(arr) {
   let head = new Node(arr[0], null);
   let mover = head;

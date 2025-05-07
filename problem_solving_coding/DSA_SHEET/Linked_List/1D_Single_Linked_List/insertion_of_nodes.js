@@ -35,21 +35,26 @@ class LinkedList {
   }
 
   insertAtLast(head, ele) {
+    let newNode = new Node(ele, null);
+
     if (head == null) {
-      new Node(ele, null);
+      return newNode;
     }
+
     let temp = head;
+
     while (temp.next !== null) {
       temp = temp.next;
     }
-    let newTemp = new Node(ele, null);
-    temp.next = newTemp;
+
+    temp.next = newNode;
+
     return head;
+    a;
   }
 
   insertAtPosition(head, ele, k) {
     if (head == null) {
-      console.log("head");
       if (k == 1) {
         let temp = new Node(ele, head);
         return temp;
@@ -89,7 +94,6 @@ class LinkedList {
 
     let temp = head;
     while (temp.next !== null) {
-
       if (temp.next.data == val) {
         let newTemp = new Node(ele, temp.next);
         temp.next = newTemp;
@@ -113,6 +117,7 @@ let insertAtHead = linkedList.insertAtHead(mainHead, 9);
 console.log("Insert at head of LinkedList");
 linkedList.printLinkedList(insertAtHead);
 
+// https://www.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1
 let insertAtLast = linkedList.insertAtLast(insertAtHead, 5);
 console.log("Insert at last of LinkedList");
 linkedList.printLinkedList(insertAtLast);

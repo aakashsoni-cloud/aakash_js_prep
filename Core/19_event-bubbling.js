@@ -2,7 +2,7 @@
 
  -> This is a mechanism of DOM when an event occurs in a nested child element it will ***bubble up*** to the parent element  
  -> Event start at target element & Propagate to the root of DOM tree
- -> use event.stopPropagation() to stop propagation
+ -> use event.stopPropagation() to stop propagation -> Use to enable event capturing
 */
 
 document.getElementById("parent").addEventListener("click", function () {
