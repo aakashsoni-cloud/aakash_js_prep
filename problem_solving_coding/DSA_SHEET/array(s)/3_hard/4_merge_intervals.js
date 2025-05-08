@@ -52,7 +52,8 @@ function mergeIntervalBrute(arr) {
       if (arr[j][0] <= end) {
         end = Math.max(end, arr[j][1]); // Extend the current interval's end
       } else {
-        break; // Stop merging as intervals are no longer overlapping
+        break; // Stop merging 
+        // as intervals are no longer overlapping
       }
     }
 

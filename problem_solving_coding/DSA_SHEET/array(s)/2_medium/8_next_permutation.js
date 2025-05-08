@@ -52,6 +52,7 @@ function nextPermutation(num) {
   let n = num.length;
 
   // Step 1
+  // Used to get the pivot
   for (let i = n - 2; i >= 0; i--) {
     if (num[i] < num[i + 1]) {
       findIndex = i;
@@ -67,18 +68,13 @@ function nextPermutation(num) {
     return num;
   }
 
+  // Swap the bigger element from the right with the findIndex(pivot) element
   for (let i = n - 1; i > findIndex; i--) {
     if (num[i] > num[findIndex]) {
       [num[i], num[findIndex]] = [num[findIndex], num[i]];
       break;
     }
   }
-
-  // num.splice(
-  //   findIndex + 1,
-  //   n - findIndex - 1,
-  //   ...num.slice(findIndex + 1).reverse()
-  // );
 
   reverse(num, findIndex + 1, n - 1);
   return num;

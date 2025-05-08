@@ -19,7 +19,7 @@ function consecutiveSequence(nums) {
     if (numSet.has(num + 1)) continue;
 
     let currNum = num;
-    let counter = 0;
+    let counter = 0; 
 
     while (numSet.has(--currNum)) {
       counter++;
